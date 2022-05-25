@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:minesweeper/components/result_widget.dart';
 
 class MinesweeperApp extends StatelessWidget {
   const MinesweeperApp({Key? key}) : super(key: key);
@@ -7,11 +8,13 @@ class MinesweeperApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Minesweeper'),
+        appBar: ResultWidget(
+          win: false,
+          onRestart: null,
         ),
+        // ignore: avoid_unnecessary_containers
         body: Container(
-          child: Text('Board'),
+          child: const Text('Board'),
         ),
       ),
     );
