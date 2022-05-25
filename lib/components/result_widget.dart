@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ResultWidget extends StatelessWidget implements PreferredSizeWidget {
   final bool? win;
-  final void Function()? onRestart;
+  final void Function() onRestart;
 
   const ResultWidget({
     Key? key,
