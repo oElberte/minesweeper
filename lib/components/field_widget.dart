@@ -6,12 +6,11 @@ class FieldWidget extends StatelessWidget {
   final void Function(Field) onOpen;
   final void Function(Field) onChangeMarkup;
 
-  const FieldWidget({
-    Key? key,
+  FieldWidget({
     required this.field,
     required this.onOpen,
     required this.onChangeMarkup,
-  }) : super(key: key);
+  });
 
   Widget _getImage() {
     int qtyMines = field.qtyMinesInNeighborhood;

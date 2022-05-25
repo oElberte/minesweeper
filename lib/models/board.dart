@@ -20,10 +20,10 @@ class Board {
   }
 
   void restart() {
-    for (var c in _fields) {
-      c.restart();
-      _raffleMines();
+    for (var f in _fields) {
+      f.restart();
     }
+    _raffleMines();
   }
 
   void revealMines() {
@@ -51,7 +51,7 @@ class Board {
   void _raffleMines() {
     int raffleds = 0;
 
-    if (qtyMines < rows * columns) {
+    if (qtyMines > rows * columns) {
       return;
     }
 
